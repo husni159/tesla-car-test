@@ -1,0 +1,188 @@
+/* Style for the container */
+body {
+    display: flex;
+    justify-content: center; /* Horizontally center-align */
+    align-items: center; /* Vertically center-align */
+    min-height: 100vh; 
+    margin: 0; 
+}
+.container {
+    color: white;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+  /* Style for the row */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Style for the image column */
+  .img-column {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* Style for the image */
+  .img-column img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect for the image */
+  .img-column img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Style for the info column */
+  .info-column {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  
+  /* Style for the description */
+  .description {
+    font-size: 18px;
+    /* color: #555; */
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: 59px;
+  }
+  p {
+    font-size: 23px;
+  }
+  /* Style for the price */
+  .price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the "Available Variants" section */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .variant {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for the "Build and Price" button */
+  button {
+    background-color: wheat;
+    color: black;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column-reverse;
+    }
+  
+    .img-column,
+    .info-column {
+      width: 100%;
+    }
+  
+    .img-column img {
+      margin-bottom: 20px;
+    }
+  }
+  /* Style for the color selection section */
+.color-selection {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the color boxes */
+  .color-boxes {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .color-box {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .color-box.selected {
+    transform: scale(1.1);
+  }
+  
+  /* Style for the selected color box border */
+  .img-fluid {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    /* Add responsive styles here if needed */
+  }
+  
+/* car-details.component.css */
+
+.background-video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust the height as needed */
+    overflow: hidden;
+  }
+  
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1;
+  }
+ /* Style the centered container */
+.centered-container {
+    color: #f0f0f0;  
+    padding-top: 100px;
+    /* border: 1px solid #ccc;  */
+    text-align: center; 
+    max-width: 600px; 
+}
+  

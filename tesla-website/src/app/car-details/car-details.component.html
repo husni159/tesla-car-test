@@ -1,0 +1,52 @@
+
+<div class="background-video-container">
+       
+    <video autoplay loop muted class="background-video">
+      <source src="assets/model-s.webm" type="video/webm">
+    </video>
+    <!-- Navigation Bar -->
+    <app-navigation></app-navigation>
+    <router-outlet></router-outlet>
+   
+    <div class="container content centered-container">
+    
+      <div class="row">
+        <div class="col-md-6">      
+          <img
+            [src]="car.image_path"
+            alt="{{ car.model }}"
+            class="img-fluid"
+            [style.border-color]="selectedColor"
+          />
+          <div class="color-selection">
+            <div class="color-boxes">
+              <div
+                class="color-box"
+                *ngFor="let color of car.car_colors"
+                [style.background-color]="color"
+                [class.selected]="selectedColor === color"
+                (click)="selectColor( getLowercaseModel(), color)"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h1>{{ car.model }}</h1>
+          <p>Description: {{ car.description }}</p>
+          <p>Price: {{ car.price }}</p>
+          <p>Available Variants:</p>
+          <ul>
+            <li *ngFor="let variant of car.variants">{{ variant }}</li>
+          </ul>
+          <p>Configurations</p>
+            <ul>
+                <li *ngFor="let key of getConfigKeys()">
+                    <strong>{{ key | capitalize }}:</strong> {{ car.configuration[key] }}
+                </li>
+            </ul>
+          <button (click)="navigateToCustomization()" class="btn btn-primary">Build and Price</button>
+        </div>
+      </div>
+    </div>
+</div>
+  

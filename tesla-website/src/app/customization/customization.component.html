@@ -1,0 +1,44 @@
+
+<div class="background-video-container">       
+    <video autoplay loop muted class="background-video">
+      <source src="assets/model-s.webm" type="video/webm">
+    </video>
+    <!-- Navigation Bar -->
+    <app-navigation></app-navigation>
+    <router-outlet></router-outlet>
+   
+    <div class="container content centered-container">
+        <div class="container">
+            <h2 class="title">Customize Your Car</h2>
+
+            <!-- Color Selection -->
+            <div class="form-group">
+                <label for="colorSelect">Select Color:</label>
+                <select id="colorSelect" class="select" [(ngModel)]="selectedColor">
+                    <option value="">Select Color</option>
+                    <option *ngFor="let color of car.car_colors" [value]="color">{{ color }}</option>
+                </select>
+            </div>
+
+            <!-- Feature Selection -->
+            <div class="form-group">
+                <label for="featureSelect">Select Variants:</label>
+                <select id="featureSelect" class="select" [(ngModel)]="selectedFeature">
+                    <option value="">Select varient</option>
+                    <option *ngFor="let variant of car.variants" [value]="variant">{{ variant }}</option>
+                </select>
+            </div>
+
+            <!-- Summary of Customization -->
+            <div class="customization-summary">
+                <h3 class="subtitle">Your Customization:</h3>
+                <p>Selected Color: <span class="selected-color">{{ selectedColor }}</span></p>
+                <p>Selected Feature: <span class="feature">{{ selectedFeature }}</span></p>
+            </div>
+
+            <!-- Proceed to Purchase -->
+            <button class="btn btn-primary" (click)="proceedToPurchase()" class="purchase-btn">Proceed to Purchase</button>
+        </div>
+    </div>
+</div>
+

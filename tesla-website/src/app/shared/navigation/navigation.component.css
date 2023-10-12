@@ -1,0 +1,34 @@
+/* Navigation Bar Styles */
+.navbar {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 0;
+  float: none;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Navigation List Styles */
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Navigation Item Styles */
+.nav-item {
+  margin: 0 20px;
+}
+
+/* Navigation Link Styles */
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007bff; 
+}

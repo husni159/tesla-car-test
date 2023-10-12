@@ -1,0 +1,76 @@
+/* Landing Page Styles */
+.landing {
+    font-family: "Times New Roman", Times, serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Hero Section Styles */
+  .hero {
+    background-image: url('../../assets/model-y-red.jpg'); /* Add your hero image path */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 200px 0;
+  }
+  
+  .hero-content {
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: black;
+  }
+  .hero h6 {
+    margin-bottom: 20px;
+    color: black;
+  }
+ 
+  /* Features Section Styles */
+  .features {
+    padding: 80px 0;
+    background-color: #fff;
+  }
+  
+  .feature {
+    margin-bottom: 40px;    
+  }
+  
+  .feature i {
+    font-size: 2rem;
+    color: #007bff;
+  }
+  
+  .feature h2 {
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+  
+  .performance {
+    background-color: #f8f8f8;
+    padding: 80px 0;
+  }
+  
+  .sustainability {
+    background-color: #fff;
+    padding: 80px 0;
+  }
+  
+  /* Button Styles*/
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #092b4e;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  

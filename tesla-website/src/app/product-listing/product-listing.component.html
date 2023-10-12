@@ -1,0 +1,46 @@
+<div class="container">
+     <!-- Navigation Bar -->
+     <app-navigation></app-navigation>
+     <router-outlet></router-outlet>
+ 
+    <!-- Search and Filter Controls -->
+    <div class="row">        
+      <div class="col-md-8">
+        <h2 >Available Models</h2>
+      </div>
+      <div class="col-md-4">
+        <input type="search" placeholder="Search by Model" [(ngModel)]="searchText" (input)="searchCars()">
+        <select [(ngModel)]="selectedFilter" (change)="filterCars()">          
+           <option value="all">All Models</option>
+           <option *ngFor="let model of allCarModels" [value]="model">{{ model }}</option>
+          </select>  
+      </div>
+    </div>
+  
+    <!-- Car Listings -->
+    <div class="row">
+        <div class="col-md-4 car-list-item" *ngFor="let car of filteredCars | paginate: { itemsPerPage: itemsPerPage, currentPage: pagination, totalItems: totalCars }">
+            <div class="car-card">
+                <a [routerLink]="['/car-details', car.id]">
+                    <img [src]="car.image_path ? car.image_path : 'assets/model-3.jpg'" alt="{{ car.model }}" class="img-fluid"  
+                />
+                </a>
+                <h3>{{ car.model }}</h3>
+                <p>{{ car.description }}</p>
+                <p>Price: {{ car.price }}</p>
+                <a [routerLink]="['/car-details', car.id]" >
+                  View details
+                </a>
+             
+            </div>
+        </div>
+    </div>
+  
+    <!-- Pagination controls -->
+    <div class="text-center">
+        <pagination-controls
+        (pageChange)="renderPage($event)"
+      ></pagination-controls>
+    </div>
+</div>
+  
